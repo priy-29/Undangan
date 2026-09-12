@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#8b6b58" />
+  <title>The Wedding of Arkan & Nabila</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="opening" class="opening-screen">
+    <div class="opening-ornament opening-ornament-top">❦</div>
+    <p class="eyebrow">THE WEDDING OF</p>
+    <h1>Arkan <span>&</span> Nabila</h1>
+    <p class="opening-date">12 • 10 • 2026</p>
+    <p class="guest-label">Kepada Yth.</p>
+    <p id="guestName" class="guest-name">Tamu Undangan</p>
+    <button id="openInvitation" class="primary-btn">Buka Undangan</button>
+    <div class="opening-ornament opening-ornament-bottom">❦</div>
+  </div>
+
+  <div id="site" class="site hidden">
+    <button id="musicBtn" class="music-btn" aria-label="Putar musik">♫</button>
+
+    <section class="hero section-bg">
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">THE WEDDING OF</p>
+        <h1>Arkan <span>&</span> Nabila</h1>
+        <p class="date-line">Senin, 12 Oktober 2026</p>
+        <div class="hero-divider">✦</div>
+        <p>Dengan penuh kebahagiaan, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dalam hari istimewa kami.</p>
+      </div>
+    </section>
+
+    <section class="quote section-paper">
+      <div class="ornament">❦</div>
+      <p class="arabic">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا</p>
+      <p class="quote-id">“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri.”</p>
+      <span class="quote-ref">QS. Ar-Rum: 21</span>
+    </section>
+
+    <section class="couple section-paper">
+      <div class="section-heading reveal"><span>THE COUPLE</span><h2>Our Beloved</h2></div>
+      <div class="couple-grid">
+        <article class="person-card reveal">
+          <div class="portrait portrait-groom"></div>
+          <div class="person-meta"><small>THE GROOM</small><h3>Arkan Pratama</h3><p>Putra pertama dari<br>Bpk. Hendra Pratama & Ibu Sari Wulandari</p></div>
+        </article>
+        <div class="ampersand reveal">&</div>
+        <article class="person-card reveal">
+          <div class="portrait portrait-bride"></div>
+          <div class="person-meta"><small>THE BRIDE</small><h3>Nabila Ayu Lestari</h3><p>Putri kedua dari<br>Bpk. Ahmad Lestari & Ibu Rina Kartika</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="event section-tinted">
+      <div class="section-heading reveal"><span>THE DAY</span><h2>Wedding Event</h2></div>
+      <div class="event-grid">
+        <article class="event-card reveal"><span class="event-icon">✦</span><h3>Akad Nikah</h3><p>Senin, 12 Oktober 2026</p><strong>08.00 – 09.30 WIB</strong><p>Masjid Al-Madina<br>Purwokerto</p><a class="outline-btn" href="#location">Lihat Lokasi</a></article>
+        <article class="event-card reveal"><span class="event-icon">❦</span><h3>Resepsi</h3><p>Senin, 12 Oktober 2026</p><strong>11.00 – 14.00 WIB</strong><p>Grand Garden Hall<br>Purwokerto</p><a class="outline-btn" href="#location">Lihat Lokasi</a></article>
+      </div>
+      <div id="countdown" class="countdown reveal"></div>
+    </section>
+
+    <section class="story section-paper">
+      <div class="section-heading reveal"><span>OUR STORY</span><h2>Love Journey</h2></div>
+      <div class="timeline">
+        <article class="timeline-item reveal"><div class="timeline-dot">01</div><div><span>2019</span><h3>Pertama Bertemu</h3><p>Berawal dari sebuah pertemuan sederhana yang tidak pernah kami sangka akan membawa kami sejauh ini.</p></div></article>
+        <article class="timeline-item reveal"><div class="timeline-dot">02</div><div><span>2022</span><h3>Memantapkan Hati</h3><p>Setelah melewati banyak cerita, kami memilih untuk tumbuh dan berjalan bersama.</p></div></article>
+        <article class="timeline-item reveal"><div class="timeline-dot">03</div><div><span>2026</span><h3>Menuju Hari Bahagia</h3><p>Dengan doa dan restu keluarga, kami melangkah ke babak baru kehidupan.</p></div></article>
+      </div>
+    </section>
+
+    <section class="gallery section-paper">
+      <div class="section-heading reveal"><span>OUR MOMENTS</span><h2>Gallery</h2></div>
+      <div class="gallery-grid">
+        <div class="gallery-item g1 reveal"></div><div class="gallery-item g2 reveal"></div><div class="gallery-item g3 reveal"></div><div class="gallery-item g4 reveal"></div><div class="gallery-item g5 reveal"></div><div class="gallery-item g6 reveal"></div>
+      </div>
+    </section>
+
+    <section class="stream section-tinted">
+      <div class="section-heading reveal"><span>JOIN US ONLINE</span><h2>Live Streaming</h2></div>
+      <div class="stream-box reveal"><div class="play-icon">▶</div><p>Live streaming tersedia pada hari acara.</p><button class="primary-btn secondary">Tonton Streaming</button></div>
+    </section>
+
+    <section class="gift section-paper">
+      <div class="section-heading reveal"><span>WEDDING GIFT</span><h2>Amplop Digital</h2></div>
+      <p class="center-copy reveal">Doa dan kehadiran Anda adalah hadiah terindah bagi kami. Bagi yang ingin berbagi tanda kasih, dapat melalui:</p>
+      <div class="bank-card reveal"><span>Bank Nusantara</span><strong>1234 5678 9012</strong><small>a.n. Arkan Pratama</small><button class="copy-btn" data-copy="123456789012">Salin Rekening</button></div>
+    </section>
+
+    <section id="location" class="location section-tinted">
+      <div class="section-heading reveal"><span>THE VENUE</span><h2>Location</h2></div>
+      <div class="map-card reveal"><div class="map-placeholder"><span>📍</span><b>Grand Garden Hall</b><small>Purwokerto, Jawa Tengah</small></div><a class="primary-btn" target="_blank" href="https://maps.google.com/?q=Purwokerto">Buka Google Maps</a></div>
+    </section>
+
+    <section class="rsvp section-paper">
+      <div class="section-heading reveal"><span>YOUR PRESENCE</span><h2>RSVP & Ucapan</h2></div>
+      <form id="rsvpForm" class="rsvp-form reveal">
+        <input name="name" placeholder="Nama" required />
+        <select name="attendance" required><option value="">Konfirmasi kehadiran</option><option>Hadir</option><option>Tidak Hadir</option></select>
+        <input name="guests" type="number" min="1" max="5" value="1" placeholder="Jumlah tamu" required />
+        <textarea name="message" rows="4" placeholder="Tulis ucapan dan doa..."></textarea>
+        <button class="primary-btn" type="submit">Kirim Ucapan</button>
+        <p id="rsvpStatus" class="form-status"></p>
+      </form>
+      <div id="messages" class="messages"></div>
+    </section>
+
+    <footer class="footer section-bg"><div class="footer-overlay"></div><div class="footer-content reveal"><p>Thank you for being part of our special day.</p><h2>Arkan & Nabila</h2><span>With love, forever.</span></div></footer>
+  </div>
+
+  <audio id="bgMusic" preload="none" loop></audio>
+  <script src="app.js"></script>
+</body>
+</html>
