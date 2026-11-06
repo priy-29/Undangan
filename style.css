@@ -1,23 +1,23 @@
 /* ============================================================
-   UNDANGAN PERNIKAHAN — JAWA MODERN LUXURY
-   Tema warna: Maroon · Burgundy · Gold · Cream · White
+   UNDANGAN PERNIKAHAN — FOREST ROMANCE
+   Tema warna: Forest Green · Sage · Champagne · Ivory
    ============================================================ */
 
 /* ---------- VARIABEL & RESET ---------- */
 :root {
-  --maroon: #701A24;
-  --maroon-2: #5A1520;
-  --maroon-dark: #4A1016;
-  --maroon-deep: #2E080D;
-  --burgundy: #8C2B33;
+  --maroon: #29483B;
+  --maroon-2: #3D604E;
+  --maroon-dark: #20392F;
+  --maroon-deep: #172B23;
+  --burgundy: #486B59;
   --gold: #C6A15B;
-  --gold-light: #E9D5A3;
-  --gold-deep: #A87E3F;
-  --cream: #FAF4E8;
-  --cream-2: #F1E7D5;
+  --gold-light: #E7D6A8;
+  --gold-deep: #A7864F;
+  --cream: #F7F5EE;
+  --cream-2: #E8EDE5;
   --white: #FFFFFF;
-  --ink: #3B2A20;
-  --ink-soft: #6B5544;
+  --ink: #24352C;
+  --ink-soft: #617166;
 
   --font-script: "Great Vibes", cursive;
   --font-display: "Playfair Display", serif;
@@ -90,7 +90,7 @@ section[id] { scroll-margin-top: 10px; }
 .ornament.light .orn-diamond { background: var(--gold-light); }
 
 /* Section gelap (maroon) dengan pola batik */
-.section.on-dark { background: linear-gradient(180deg, var(--maroon-deep), var(--maroon-dark) 35%, #3A0B10 60%, var(--maroon-deep)); position: relative; color: var(--cream); }
+.section.on-dark { background: linear-gradient(180deg, var(--maroon-deep), var(--maroon-dark) 35%, #20392F 60%, var(--maroon-deep)); position: relative; color: var(--cream); }
 .section.on-dark::before { content: ""; position: absolute; inset: 0; background-image: var(--pattern-kawung); pointer-events: none; }
 .section.on-dark .title { color: var(--gold-light); }
 .section.on-dark .eyebrow { color: var(--gold-light); opacity: 0.85; }
@@ -204,7 +204,7 @@ section[id] { scroll-margin-top: 10px; }
 }
 .letter-orn { width: 42px; opacity: 0.9; }
 .letter-mono { font-family: var(--font-script); font-size: 40px; line-height: 1; color: var(--maroon); }
-.letter-sub { font-size: 12.5px; font-style: italic; color: #7A6450; line-height: 1.6; }
+.letter-sub { font-size: 12.5px; font-style: italic; color: #617166; line-height: 1.6; }
 
 .cover.opening .env-letter { z-index: 6; transform: translateY(-96px); }
 
@@ -608,7 +608,7 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
 .video-placeholder {
   position: absolute; inset: 0;
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;
-  background: linear-gradient(160deg, #5A1520, #2E080D);
+  background: linear-gradient(160deg, #3D604E, #172B23);
   color: rgba(250, 244, 232, 0.9);
 }
 .vp-icon {
@@ -691,7 +691,7 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
    ============================================================ */
 .rsvp-card {
   position: relative; z-index: 1;
-  background: linear-gradient(165deg, #FFFDF7, #F1E7D5);
+  background: linear-gradient(165deg, #FFFDF7, #E8EDE5);
   border-radius: 22px;
   border: 1px solid rgba(198, 161, 91, 0.75);
   padding: clamp(26px, 6vw, 42px);
