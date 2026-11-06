@@ -9,7 +9,7 @@
    ============================================================ */
 
 const CONFIG = {
-  title: "The Wedding of Galang & Lily",
+  title: "The Wedding of Galang & Lili",
 
   couple: {
     groom: {
@@ -21,7 +21,7 @@ const CONFIG = {
       photo: "assets/images/groom.svg"
     },
     bride: {
-      firstName: "Lily",
+      firstName: "Lili",
       fullName: "Lili Nafisa Nestya",
       role: "PUTRI KEDUA DARI",
       parents: "Bapak Sukin & Ibu Sumarni",
