@@ -54,16 +54,36 @@ const CONFIG = {
   },
 
   story: [
-    { year: "2018", title: "Pertama Bertemu", photo: "assets/images/gallery-1.svg",
-      desc: "Kami bertemu pertama kali di sebuah acara organisasi kampus di Purwokerto. Sapaan singkat yang sederhana, namun meninggalkan kesan yang tak terlupakan." },
-    { year: "2019", title: "Menjalin Persahabatan", photo: "assets/images/gallery-2.svg",
-      desc: "Dari sekadar rekan, kami menjadi sahabat. Kopi, buku, dan obrolan panjang menemani setiap perjalanan kami." },
-    { year: "2021", title: "Jatuh Cinta", photo: "assets/images/gallery-3.svg",
-      desc: "Hati tidak pernah bisa berbohong. Perlahan, persahabatan itu tumbuh menjadi cinta yang saling menguatkan." },
-    { year: "2023", title: "Lamaran", photo: "assets/images/gallery-4.svg",
-      desc: "Dengan restu kedua keluarga, kami melangsungkan prosesi lamaran di kediaman keluarga. Bismillah, menuju ikatan yang lebih suci." },
-    { year: "2026", title: "Menuju Pelaminan", photo: "assets/images/gallery-5.svg",
-      desc: "Dengan penuh syukur, kami memantaskan diri untuk mengikat janji suci. Doa terbaik Anda adalah hadiah terindah bagi kami." }
+    {
+      year: "Masa SMP",
+      title: "Awal Pertemuan",
+      photo: "assets/images/story-1.jpg",
+      desc: "Kisah kami berawal sejak masa SMP. Saat itu, pernah tumbuh rasa saling suka, tetapi keadaan dan hal-hal lain belum mengizinkan kami untuk bersama. Meski begitu, pertemuan sederhana itu menjadi awal dari cerita panjang kami."
+    },
+    {
+      year: "Juni · Masa SMK",
+      title: "Mulai Dekat Kembali",
+      photo: "assets/images/story-2.jpg",
+      desc: "Waktu mempertemukan kami kembali. Pada bulan Juni, saat masa SMK, kami mulai saling mendekat dan mengenal lebih dalam. Obrolan melalui WhatsApp pun semakin sering, hingga perlahan jarak di antara kami terasa semakin dekat."
+    },
+    {
+      year: "18 Juli",
+      title: "Memulai Kisah Bersama",
+      photo: "assets/images/story-3.jpg",
+      desc: "Dari obrolan sederhana yang semakin berarti, tumbuh keyakinan untuk melangkah bersama. Pada tanggal 18 Juli, kami resmi menjalin hubungan dan memulai perjalanan sebagai sepasang kekasih."
+    },
+    {
+      year: "12 April 2025",
+      title: "Satu Langkah Lebih Serius",
+      photo: "assets/images/story-4.jpg",
+      desc: "Dengan niat baik dan restu keluarga, kami melangkah ke tahap yang lebih serius melalui prosesi lamaran pada 12 April 2025. Hari itu menjadi salah satu momen berharga dalam perjalanan cinta kami."
+    },
+    {
+      year: "29 November 2026",
+      title: "Menuju Hari Bahagia",
+      photo: "assets/images/story-5.jpg",
+      desc: "Kini, dengan penuh rasa syukur, kami bersiap menyatukan dua hati dalam ikatan pernikahan pada 29 November 2026. Semoga langkah ini menjadi awal perjalanan baru yang dipenuhi cinta, doa, dan kebahagiaan."
+    }
   ],
 
   gallery: [
