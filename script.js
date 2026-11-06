@@ -40,14 +40,14 @@ const CONFIG = {
     akad: {
       date: "Minggu, 29 November 2026",
       time: "Pukul 08.00 – 10.00 WIB",
-      venue: "Masjid Agung Purwokerto",
+      venue: "Rumah Lili",
       address: "Jl. Jend. Sudirman No. 123, Purwokerto Timur, Banyumas, Jawa Tengah 53111",
       maps: "https://www.google.com/maps/search/?api=1&query=Masjid+Agung+Purwokerto"
     },
     resepsi: {
       date: "Minggu, 29 November 2026",
       time: "Pukul 11.00 – 14.00 WIB",
-      venue: "Pendopo Agung Purwokerto",
+      venue: "Rumah Galang",
       address: "Jl. Jend. Sudirman No. 123, Purwokerto Timur, Banyumas, Jawa Tengah 53111",
       maps: "https://www.google.com/maps/search/?api=1&query=Purwokerto+Jawa+Tengah"
     }
