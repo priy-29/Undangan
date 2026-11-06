@@ -982,7 +982,7 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
 
 
 /* ---------- UPDATE RANGKAIAN ACARA: RUMAH + QR LOKASI ---------- */
-.ev-tag { display: none !important; }
+.ev-tag { display: block; margin-bottom: 8px; font-family: var(--font-caps); letter-spacing: 5px; font-size: 13px; color: var(--gold-light); }
 .ev-details li:has(#akadVenue),
 .ev-details li:has(#resepsiVenue) {
   align-items: center;
@@ -1052,4 +1052,70 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
   .event-card { padding: 30px 18px 28px; }
   .location-qr-card { gap: 12px; padding: 14px; }
   .location-qr-frame { flex-basis: 96px; width: 96px; height: 96px; }
+}
+
+
+/* ---------- JADWAL ACARA & LOKASI RUMAH ---------- */
+.home-locations {
+  position: relative;
+  z-index: 1;
+  margin: 34px auto 0;
+  max-width: 860px;
+}
+.home-locations-title {
+  margin-bottom: 18px;
+  text-align: center;
+  color: var(--gold-light);
+  font-family: var(--font-display);
+  font-size: clamp(22px, 5vw, 28px);
+  font-weight: 600;
+}
+.home-locations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.home-location-card {
+  padding: 24px 18px;
+  text-align: center;
+  border-radius: 18px;
+  border: 1px solid rgba(198,161,91,.7);
+  background: linear-gradient(150deg, #F7F5EE, #E8EDE5);
+  color: var(--ink);
+  box-shadow: 0 16px 34px rgba(0,0,0,.2);
+}
+.home-location-card .ev-house-icon { margin: 0 auto 10px; }
+.home-location-card h4 {
+  font-family: var(--font-display);
+  color: var(--maroon-dark);
+  font-size: 21px;
+  font-weight: 600;
+}
+.home-location-card p {
+  margin-top: 8px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.home-map-link {
+  display: inline-flex;
+  margin-top: 14px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--maroon), var(--maroon-2));
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+.home-map-link[hidden] { display: none !important; }
+.location-qr-frame {
+  display: block;
+  text-decoration: none;
+}
+@media (max-width: 480px) {
+  .home-locations-grid { gap: 12px; }
+  .home-location-card { padding: 20px 10px; }
+  .home-location-card h4 { font-size: 18px; }
+  .home-location-card p { font-size: 12.5px; }
 }
