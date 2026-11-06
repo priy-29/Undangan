@@ -16,7 +16,7 @@ const CONFIG = {
       firstName: "Galang",
       fullName: "Sevan Galang Prasetyo",
       role: "PUTRA PERTAMA DARI",
-      parents: "Bapak Budi & Ibu Tri Wahyuni",
+      parents: "Bapak Budi Ariyanto & Ibu Tri Wahyuni",
       instagram: "sevangalang",
       photo: "assets/images/groom.svg"
     },
@@ -41,15 +41,15 @@ const CONFIG = {
       date: "Minggu, 29 November 2026",
       time: "Pukul 08.00 – 10.00 WIB",
       venue: "Rumah Lili",
-      address: "Jl. Jend. Sudirman No. 123, Purwokerto Timur, Banyumas, Jawa Tengah 53111",
-      maps: "https://www.google.com/maps/search/?api=1&query=Masjid+Agung+Purwokerto"
+      address: "Jipang, RT 01 RW 04",
+      maps: ""
     },
     resepsi: {
       date: "Minggu, 29 November 2026",
       time: "Pukul 11.00 – 14.00 WIB",
       venue: "Rumah Galang",
-      address: "Jl. Jend. Sudirman No. 123, Purwokerto Timur, Banyumas, Jawa Tengah 53111",
-      maps: "https://www.google.com/maps/search/?api=1&query=Purwokerto+Jawa+Tengah"
+      address: "Rancamaya, RT 06 RW 01",
+      maps: ""
     }
   },
 
@@ -103,17 +103,14 @@ const CONFIG = {
 
   gifts: {
     banks: [
-      { name: "BCA", number: "1234567890", holder: "a.n. Sevan Galang Prasetyo" },
-      { name: "BRI", number: "9876543210", holder: "a.n. Lili Nafisa Nestya" },
-      { name: "Mandiri", number: "5551234567", holder: "a.n. Sevan Galang Prasetyo" }
+      { name: "BCA", number: "4240734031", holder: "a.n. Sevan Galang Prasetyo" },
+      { name: "BCA", number: "4240980971", holder: "a.n. Lili Nafisa Nestya" }
     ],
     wallets: [
-      { name: "DANA", number: "081234567890" },
-      { name: "GoPay", number: "081234567890" },
-      { name: "OVO", number: "081234567890" },
-      { name: "ShopeePay", number: "081234567890" }
+      { name: "DANA · Galang", number: "082137513256" },
+      { name: "DANA · Lili", number: "083185728027" }
     ],
-    address: "Jl. Jend. Sudirman No. 123, Purwokerto Timur, Banyumas, Jawa Tengah 53111",
+    address: "Rumah Galang: Rancamaya, RT 06 RW 01. Rumah Lili: Jipang, RT 01 RW 04.",
     qris: "assets/images/qris.svg"
   },
 
