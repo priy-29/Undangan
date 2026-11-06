@@ -979,3 +979,77 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
   .reveal, .reveal-left, .reveal-right, .reveal-zoom { opacity: 1 !important; transform: none !important; }
   .envelope, .btn-open::after { animation: none !important; }
 }
+
+
+/* ---------- UPDATE RANGKAIAN ACARA: RUMAH + QR LOKASI ---------- */
+.ev-tag { display: none !important; }
+.ev-details li:has(#akadVenue),
+.ev-details li:has(#resepsiVenue) {
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(17px, 4.5vw, 21px);
+  color: var(--gold-light);
+}
+.ev-details li:has(#akadVenue) > svg,
+.ev-details li:has(#resepsiVenue) > svg { display: none; }
+.ev-details strong {
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+.ev-house-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: linear-gradient(145deg, var(--gold-light), var(--gold));
+  color: var(--maroon-deep);
+  font-size: 26px;
+  line-height: 1;
+  box-shadow: 0 5px 14px rgba(0,0,0,.2);
+}
+.location-qr-card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 420px);
+  margin: 24px auto 0;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  border: 1px solid rgba(198,161,91,.7);
+  border-radius: 20px;
+  background: linear-gradient(145deg, #F7F5EE, #E8EDE5);
+  color: var(--ink);
+  box-shadow: 0 18px 36px rgba(0,0,0,.22);
+}
+.location-qr-frame {
+  flex: 0 0 112px;
+  width: 112px;
+  height: 112px;
+  padding: 7px;
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  background: #fff;
+}
+.location-qr-frame img { width: 100%; height: 100%; object-fit: contain; }
+.location-qr-copy { text-align: left; }
+.location-qr-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--maroon-dark);
+}
+.location-qr-sub {
+  margin-top: 5px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+@media (max-width: 420px) {
+  .event-card { padding: 30px 18px 28px; }
+  .location-qr-card { gap: 12px; padding: 14px; }
+  .location-qr-frame { flex-basis: 96px; width: 96px; height: 96px; }
+}
