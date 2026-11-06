@@ -39,14 +39,14 @@ const CONFIG = {
   events: {
     akad: {
       date: "Minggu, 29 November 2026",
-      time: "Pukul 08.00 – 10.00 WIB",
+      time: "Pukul 09.00 – 10.30 WIB",
       venue: "Rumah Lili",
       address: "Jipang, RT 01 RW 04",
       maps: ""
     },
     resepsi: {
       date: "Minggu, 29 November 2026",
-      time: "Pukul 11.00 – 14.00 WIB",
+      time: "Pukul 11.00 – 12.00 WIB",
       venue: "Rumah Galang",
       address: "Rancamaya, RT 06 RW 01",
       maps: ""
@@ -262,20 +262,26 @@ function applyStatic() {
   $("#brideIg").href = "https://instagram.com/" + b.instagram;
   $("#brideIgText").textContent = "@" + b.instagram;
 
-  /* Acara */
+  /* Rangkaian acara */
   const e = CONFIG.events;
   $("#akadDate").textContent = e.akad.date;
   $("#akadTime").textContent = e.akad.time;
-  $("#akadVenue").textContent = e.akad.venue;
-  $("#akadAddress").textContent = e.akad.address;
-  $("#akadMap").href = e.akad.maps || "#";
-  $("#akadMap").hidden = !e.akad.maps;
   $("#resepsiDate").textContent = e.resepsi.date;
   $("#resepsiTime").textContent = e.resepsi.time;
-  $("#resepsiVenue").textContent = e.resepsi.venue;
-  $("#resepsiAddress").textContent = e.resepsi.address;
-  $("#resepsiMap").href = e.resepsi.maps || "#";
-  $("#resepsiMap").hidden = !e.resepsi.maps;
+
+  /* Lokasi rumah kedua mempelai */
+  $("#galangHomeAddress").textContent = e.resepsi.address;
+  $("#liliHomeAddress").textContent = e.akad.address;
+  const galangMap = $("#galangHomeMap");
+  const liliMap = $("#liliHomeMap");
+  if (galangMap) {
+    galangMap.href = e.resepsi.maps || "#";
+    galangMap.hidden = !e.resepsi.maps;
+  }
+  if (liliMap) {
+    liliMap.href = e.akad.maps || "#";
+    liliMap.hidden = !e.akad.maps;
+  }
 
   /* Hadiah */
   $("#giftAddress").textContent = CONFIG.gifts.address;
