@@ -268,12 +268,14 @@ function applyStatic() {
   $("#akadTime").textContent = e.akad.time;
   $("#akadVenue").textContent = e.akad.venue;
   $("#akadAddress").textContent = e.akad.address;
-  $("#akadMap").href = e.akad.maps;
+  $("#akadMap").href = e.akad.maps || "#";
+  $("#akadMap").hidden = !e.akad.maps;
   $("#resepsiDate").textContent = e.resepsi.date;
   $("#resepsiTime").textContent = e.resepsi.time;
   $("#resepsiVenue").textContent = e.resepsi.venue;
   $("#resepsiAddress").textContent = e.resepsi.address;
-  $("#resepsiMap").href = e.resepsi.maps;
+  $("#resepsiMap").href = e.resepsi.maps || "#";
+  $("#resepsiMap").hidden = !e.resepsi.maps;
 
   /* Hadiah */
   $("#giftAddress").textContent = CONFIG.gifts.address;
