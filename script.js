@@ -42,14 +42,14 @@ const CONFIG = {
       time: "Pukul 09.00 – 10.30 WIB",
       venue: "Rumah Lili",
       address: "Jipang, RT 01 RW 04",
-      maps: ""
+      maps: "https://maps.app.goo.gl/H1JuJbyjfcZuZDfP8"
     },
     resepsi: {
       date: "Minggu, 29 November 2026",
       time: "Pukul 11.00 – 12.00 WIB",
       venue: "Rumah Galang",
       address: "Rancamaya, RT 06 RW 01",
-      maps: ""
+      maps: "https://maps.app.goo.gl/9Ly4uFxbrhpC8SNRA?g_st=ac"
     }
   },
 
