@@ -5,19 +5,19 @@
 
 /* ---------- VARIABEL & RESET ---------- */
 :root {
-  --maroon: #29483B;
-  --maroon-2: #3D604E;
-  --maroon-dark: #20392F;
-  --maroon-deep: #172B23;
-  --burgundy: #486B59;
+  --maroon: #496653;
+  --maroon-2: #78917B;
+  --maroon-dark: #3E5B49;
+  --maroon-deep: #304A3B;
+  --burgundy: #91A792;
   --gold: #C6A15B;
   --gold-light: #E7D6A8;
   --gold-deep: #A7864F;
-  --cream: #F7F5EE;
-  --cream-2: #E8EDE5;
+  --cream: #F7F7F0;
+  --cream-2: #E9EDE4;
   --white: #FFFFFF;
-  --ink: #24352C;
-  --ink-soft: #617166;
+  --ink: #2D4436;
+  --ink-soft: #65796A;
 
   --font-script: "Great Vibes", cursive;
   --font-display: "Playfair Display", serif;
@@ -25,8 +25,8 @@
   --font-caps: "Cinzel", serif;
 
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
-  --pattern-kawung: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='none' stroke='%23C6A15B' stroke-width='2' stroke-opacity='0.16'%3E%3Ccircle cx='0' cy='0' r='34'/%3E%3Ccircle cx='60' cy='0' r='34'/%3E%3Ccircle cx='0' cy='60' r='34'/%3E%3Ccircle cx='60' cy='60' r='34'/%3E%3C/g%3E%3C/svg%3E");
-  --pattern-kawung-soft: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='none' stroke='%23C6A15B' stroke-width='2' stroke-opacity='0.07'%3E%3Ccircle cx='0' cy='0' r='34'/%3E%3Ccircle cx='60' cy='0' r='34'/%3E%3Ccircle cx='0' cy='60' r='34'/%3E%3Ccircle cx='60' cy='60' r='34'/%3E%3C/g%3E%3C/svg%3E");
+  --pattern-kawung: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='none' stroke='%23D7C9A3' stroke-width='2' stroke-opacity='0.13'%3E%3Ccircle cx='0' cy='0' r='34'/%3E%3Ccircle cx='60' cy='0' r='34'/%3E%3Ccircle cx='0' cy='60' r='34'/%3E%3Ccircle cx='60' cy='60' r='34'/%3E%3C/g%3E%3C/svg%3E");
+  --pattern-kawung-soft: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='none' stroke='%23D7C9A3' stroke-width='2' stroke-opacity='0.06'%3E%3Ccircle cx='0' cy='0' r='34'/%3E%3Ccircle cx='60' cy='0' r='34'/%3E%3Ccircle cx='0' cy='60' r='34'/%3E%3Ccircle cx='60' cy='60' r='34'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -90,10 +90,10 @@ section[id] { scroll-margin-top: 10px; }
 .ornament.light .orn-diamond { background: var(--gold-light); }
 
 /* Section gelap (forest) dengan pola batik */
-.section.on-dark { background: linear-gradient(180deg, var(--maroon-deep), var(--maroon-dark) 35%, #20392F 60%, var(--maroon-deep)); position: relative; color: var(--cream); }
+.section.on-dark { background: linear-gradient(180deg, #A9BBA7 0%, #91A792 38%, #A7B9A4 72%, #C1CCB9 100%); position: relative; color: #304A3B; }
 .section.on-dark::before { content: ""; position: absolute; inset: 0; background-image: var(--pattern-kawung); pointer-events: none; }
-.section.on-dark .title { color: var(--gold-light); }
-.section.on-dark .eyebrow { color: var(--gold-light); opacity: 0.85; }
+.section.on-dark .title { color: #F8F3E5; text-shadow: 0 2px 12px rgba(48, 74, 59, 0.24); }
+.section.on-dark .eyebrow { color: #405C49; opacity: 0.95; }
 
 /* ---------- ANIMASI MUNCUL SAAT SCROLL ---------- */
 .reveal, .reveal-left, .reveal-right, .reveal-zoom {
@@ -494,23 +494,23 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
 }
 .event-card {
   position: relative;
-  background: linear-gradient(160deg, rgba(72, 107, 89, 0.92), rgba(32, 57, 47, 0.96));
+  background: linear-gradient(145deg, rgba(211, 224, 205, 0.97), rgba(166, 190, 166, 0.98));
   border: 1px solid rgba(198, 161, 91, 0.65);
   border-radius: 20px;
   padding: 36px 26px 32px;
   text-align: center;
-  box-shadow: 0 26px 50px rgba(0, 0, 0, 0.35), inset 0 0 0 4px rgba(231, 214, 168, 0.07);
+  box-shadow: 0 20px 42px rgba(48, 74, 59, 0.18), inset 0 0 0 4px rgba(255, 255, 255, 0.22);
 }
 .ev-corner { position: absolute; width: 22px; height: 22px; border-color: var(--gold-light); border-style: solid; }
 .c1 { top: 12px; left: 12px; border-width: 2px 0 0 2px; border-radius: 6px 0 0 0; }
 .c2 { top: 12px; right: 12px; border-width: 2px 2px 0 0; border-radius: 0 6px 0 0; }
 .c3 { bottom: 12px; left: 12px; border-width: 0 0 2px 2px; border-radius: 0 0 0 6px; }
 .c4 { bottom: 12px; right: 12px; border-width: 0 2px 2px 0; border-radius: 0 0 6px 0; }
-.ev-tag { font-family: var(--font-caps); letter-spacing: 5px; font-size: 13px; color: var(--gold-light); }
-.ev-date { margin-top: 14px; font-family: var(--font-display); font-weight: 600; font-size: clamp(19px, 5vw, 23px); color: #fff; }
+.ev-tag { font-family: var(--font-caps); letter-spacing: 5px; font-size: 13px; color: #536F59; }
+.ev-date { margin-top: 14px; font-family: var(--font-display); font-weight: 600; font-size: clamp(19px, 5vw, 23px); color: #304A3B; }
 .ev-details { list-style: none; margin-top: 20px; display: grid; gap: 11px; }
-.ev-details li { display: flex; align-items: flex-start; justify-content: center; gap: 9px; font-size: 15px; color: rgba(247, 245, 238, 0.92); }
-.ev-details svg { margin-top: 3px; color: var(--gold-light); flex: none; }
+.ev-details li { display: flex; align-items: flex-start; justify-content: center; gap: 9px; font-size: 15px; color: rgba(48, 74, 59, 0.9); }
+.ev-details svg { margin-top: 3px; color: #8C7547; flex: none; }
 .ev-address { font-size: 13.5px; opacity: 0.85; font-style: italic; line-height: 1.65; }
 .btn-map {
   display: inline-flex; align-items: center; gap: 8px;
@@ -1065,7 +1065,8 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
 .home-locations-title {
   margin-bottom: 18px;
   text-align: center;
-  color: var(--gold-light);
+  color: #F8F3E5;
+  text-shadow: 0 2px 10px rgba(48,74,59,.2);
   font-family: var(--font-display);
   font-size: clamp(22px, 5vw, 28px);
   font-weight: 600;
@@ -1080,7 +1081,7 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
   text-align: center;
   border-radius: 18px;
   border: 1px solid rgba(198,161,91,.7);
-  background: linear-gradient(150deg, #F7F5EE, #E8EDE5);
+  background: linear-gradient(145deg, #F3F5EB, #D9E4D5);
   color: var(--ink);
   box-shadow: 0 16px 34px rgba(0,0,0,.2);
 }
