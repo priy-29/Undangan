@@ -773,7 +773,11 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
   font-size: 14.5px;
   margin-bottom: 26px;
 }
-.guestbook-grid { display: grid; grid-template-columns: 1fr; gap: 16px; max-width: 880px; margin: 0 auto; }
+.guestbook-grid { display: grid; grid-template-columns: 1fr; gap: 16px; max-width: 880px; max-height: 560px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #D5C7AD #F1EAD8; padding: 6px 10px 14px 6px; margin: 0 auto; align-content: start; }
+.guestbook-grid::-webkit-scrollbar { width: 6px; }
+.guestbook-grid::-webkit-scrollbar-track { background: #F1EAD8; border-radius: 20px; }
+.guestbook-grid::-webkit-scrollbar-thumb { background: #D5C7AD; border-radius: 20px; }
+@media (max-width: 600px) { .guestbook-grid { max-height: 490px; padding-right: 8px; } }
 .gb-card {
   position: relative;
   background: #fff;
