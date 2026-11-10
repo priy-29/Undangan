@@ -364,7 +364,7 @@ function renderGifts() {
   if (bankWrap) {
     bankWrap.innerHTML = CONFIG.gifts.banks.map((bk) =>
       '<article class="account-card">' +
-        '<div class="account-card-top"><img class="account-logo bca-logo" src="https://cdn.jsdelivr.net/npm/idn-finlogos@2.5.1/dist/icons/bca.svg" alt="Logo BCA" loading="lazy"><span class="account-chip" aria-hidden="true"><i></i></span></div>' +
+        '<div class="account-card-top"><img class="account-logo bca-logo" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg" alt="Logo BCA" loading="lazy"><span class="account-chip" aria-hidden="true"><i></i></span></div>' +
         '<div class="account-number">' + bk.number + '</div>' +
         '<div class="account-card-bottom"><span class="account-holder">' + bk.holder + '</span>' +
         '<button type="button" class="btn-copy account-copy" data-copy="' + bk.number + '">' +
@@ -377,7 +377,7 @@ function renderGifts() {
   if (walletWrap) {
     walletWrap.innerHTML = CONFIG.gifts.wallets.map((w) =>
       '<article class="account-card wallet-account-card">' +
-        '<div class="account-card-top"><img class="account-logo dana-logo" src="https://cdn.jsdelivr.net/npm/idn-finlogos@2.5.1/dist/icons/dana.svg" alt="Logo DANA" loading="lazy"><span class="account-chip" aria-hidden="true"><i></i></span></div>' +
+        '<div class="account-card-top"><img class="account-logo dana-logo" src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg" alt="Logo DANA" loading="lazy"><span class="account-chip" aria-hidden="true"><i></i></span></div>' +
         '<div class="account-number">' + w.number + '</div>' +
         '<div class="account-card-bottom"><span class="account-holder">' + w.name.split(" · ")[1] + '</span>' +
         '<button type="button" class="btn-copy account-copy" data-copy="' + w.number + '">' +
