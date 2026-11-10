@@ -1129,3 +1129,21 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
   .account-card-bottom { align-items: center; flex-direction: row; }
   .account-copy { align-self: auto; }
 }
+
+.guestbook-grid {
+  max-height: 560px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 4px 10px 16px 4px;
+  scrollbar-width: thin;
+  scrollbar-color: #D5C7AD #F1EAD8;
+}
+
+.guestbook-grid::-webkit-scrollbar {
+  width: 6px;
+}
+
+.guestbook-grid::-webkit-scrollbar-thumb {
+  background: #D5C7AD;
+  border-radius: 10px;
+}
