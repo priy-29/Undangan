@@ -566,7 +566,7 @@ function setupRsvp() {
 
     const name = $("#rsvpName").value.trim();
     const attendance = form.querySelector('input[name="attendance"]:checked');
-    const guests = parseInt($("#rsvpGuests").value, 10) || 1;
+    const guests = 1;
     const message = $("#rsvpMsg").value.trim();
 
     if (!name) { status.textContent = "Mohon isi nama Anda terlebih dahulu."; status.classList.add("error"); return; }
