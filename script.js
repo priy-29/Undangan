@@ -363,20 +363,27 @@ function renderGifts() {
   const bankWrap = $("#bankList");
   if (bankWrap) {
     bankWrap.innerHTML = CONFIG.gifts.banks.map((bk) =>
-      '<div class="bank-row">' +
-        '<span class="bank-name">' + bk.name + "</span>" +
-        '<span class="bank-info"><span class="bank-no">' + bk.number + '</span>' +
-        '<span class="bank-holder">' + bk.holder + "</span></span>" +
-        '<button type="button" class="btn-copy" data-copy="' + bk.number + '">SALIN</button>' +
-      "</div>"
+      '<article class="account-card">' +
+        '<div class="account-card-top"><span class="account-brand">' + bk.name + '</span><span class="account-chip" aria-hidden="true"><i></i></span></div>' +
+        '<div class="account-number">' + bk.number + '</div>' +
+        '<div class="account-card-bottom"><span class="account-holder">' + bk.holder + '</span>' +
+        '<button type="button" class="btn-copy account-copy" data-copy="' + bk.number + '">' +
+          '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>Salin No. Rekening' +
+        '</button></div>' +
+      '</article>'
     ).join("");
   }
   const walletWrap = $("#walletList");
   if (walletWrap) {
     walletWrap.innerHTML = CONFIG.gifts.wallets.map((w) =>
-      '<button type="button" class="wallet-chip" data-copy="' + w.number + '">' +
-        '<span class="w-label">' + w.name + "</span>" + w.number +
-      "</button>"
+      '<article class="account-card wallet-account-card">' +
+        '<div class="account-card-top"><span class="account-brand dana-brand">' + w.name.split(" · ")[0] + '</span><span class="account-chip" aria-hidden="true"><i></i></span></div>' +
+        '<div class="account-number">' + w.number + '</div>' +
+        '<div class="account-card-bottom"><span class="account-holder">' + w.name.split(" · ")[1] + '</span>' +
+        '<button type="button" class="btn-copy account-copy" data-copy="' + w.number + '">' +
+          '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>Salin Nomor' +
+        '</button></div>' +
+      '</article>'
     ).join("");
   }
 }
