@@ -638,10 +638,10 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
 .gift-title { font-family: var(--font-display); font-weight: 600; font-size: 21px; color: #776B58; }
 .gift-sub { margin-top: 10px; font-size: 14.5px; font-style: italic; color: #776B58; }
 
-.bank-list { margin-top: 18px; display: grid; grid-template-columns: 1fr; gap: 18px; }
+.bank-list { margin: 18px auto 0; display: grid; grid-template-columns: 1fr; gap: 14px; max-width: 520px; }
 .account-card {
   position: relative; overflow: hidden; isolation: isolate;
-  min-height: 218px; padding: 22px 22px 18px;
+  min-height: 176px; padding: 16px 18px 14px; max-width: 520px; width: 100%; margin-inline: auto;
   display: flex; flex-direction: column; justify-content: space-between;
   border-radius: 22px; border: 1px solid rgba(255,255,255,.9);
   background:
@@ -652,15 +652,15 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
 .account-card::before, .account-card::after {
   content: ""; position: absolute; z-index: -1; pointer-events: none;
   border: 1px solid rgba(119,107,88,.09); border-radius: 50%;
-  width: 250px; height: 150px; transform: rotate(-24deg);
+  width: 190px; height: 115px; transform: rotate(-24deg);
 }
 .account-card::before { right: -70px; top: -64px; }
 .account-card::after { right: -105px; top: -30px; }
 .account-card-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.account-brand { color: #776B58; font-family: var(--font-display); font-weight: 700; font-size: 27px; letter-spacing: 1px; }
+.account-brand { color: #776B58; font-family: var(--font-display); font-weight: 700; font-size: 22px; letter-spacing: .5px; }
 .dana-brand { font-family: var(--font-caps); letter-spacing: 3px; }
 .account-chip {
-  width: 39px; height: 30px; border-radius: 7px; flex: none; position: relative;
+  width: 34px; height: 26px; border-radius: 7px; flex: none; position: relative;
   border: 1px solid rgba(119,107,88,.35);
   background: linear-gradient(135deg,#F8F1DE,#DCCDAE);
   box-shadow: inset 0 0 0 1px rgba(255,255,255,.65);
@@ -669,13 +669,13 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
 .account-chip::before { width:100%; height:1px; top:50%; left:0; }
 .account-chip::after { height:100%; width:1px; left:50%; top:0; }
 .account-chip i { position:absolute; inset:5px 9px; border:1px solid rgba(119,107,88,.25); border-radius:3px; }
-.account-number { margin-top: 24px; color: #776B58; font-family: var(--font-display); font-size: clamp(21px,5.4vw,28px); font-weight: 600; letter-spacing: clamp(2px, .8vw, 5px); overflow-wrap:anywhere; }
-.account-card-bottom { display:flex; align-items:flex-end; justify-content:space-between; gap:12px; margin-top:16px; }
-.account-holder { color:#776B58; font-family:var(--font-display); font-size:15px; font-weight:600; line-height:1.4; overflow-wrap:anywhere; }
-.account-copy { flex:none; display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:10px 14px; border:1.5px solid #A99A7F; border-radius:999px; background:rgba(255,255,255,.88); color:#776B58; font-family:var(--font-caps); font-size:10px; letter-spacing:.5px; }
+.account-number { margin-top: 15px; color: #776B58; font-family: var(--font-display); font-size: clamp(18px,4.5vw,23px); font-weight: 600; letter-spacing: clamp(1.5px, .5vw, 3px); overflow-wrap:anywhere; }
+.account-card-bottom { display:flex; align-items:flex-end; justify-content:space-between; gap:10px; margin-top:12px; }
+.account-holder { color:#776B58; font-family:var(--font-display); font-size:13px; font-weight:600; line-height:1.4; overflow-wrap:anywhere; }
+.account-copy { flex:none; display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:8px 11px; border:1.5px solid #A99A7F; border-radius:999px; background:rgba(255,255,255,.88); color:#776B58; font-family:var(--font-caps); font-size:9px; letter-spacing:.3px; }
 .account-copy:hover { background:#F1EAD8; color:#776B58; border-color:#A99A7F; }
-.wallet-list { margin-top: 18px; display: grid; grid-template-columns: 1fr; gap: 18px; }
-.wallet-account-card { min-height: 195px; }
+.wallet-list { margin: 14px auto 0; display: grid; grid-template-columns: 1fr; gap: 14px; max-width: 520px; }
+.wallet-account-card { min-height: 160px; }
 .qris-wrap { margin-top: 22px; text-align: center; }
 .qris-wrap img { width: 172px; margin: 0 auto; border-radius: 12px; border: 1px solid rgba(198, 161, 91, 0.7); box-shadow: 0 14px 26px rgba(32, 57, 47, 0.18); }
 .qris-label { margin-top: 10px; font-size: 13px; font-style: italic; color: #776B58; }
@@ -1120,7 +1120,7 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
 }
 
 @media (max-width: 390px) {
-  .account-card { padding: 18px 16px 16px; min-height: 205px; }
-  .account-card-bottom { align-items: flex-start; flex-direction: column; }
-  .account-copy { align-self: flex-end; }
+  .account-card { padding: 15px 15px 13px; min-height: 158px; }
+  .account-card-bottom { align-items: center; flex-direction: row; }
+  .account-copy { align-self: auto; }
 }
