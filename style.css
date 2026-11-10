@@ -641,13 +641,13 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
 .bank-list { margin: 18px auto 0; display: grid; grid-template-columns: 1fr; gap: 14px; max-width: 520px; }
 .account-card {
   position: relative; overflow: hidden; isolation: isolate;
-  min-height: 176px; padding: 16px 18px 14px; max-width: 520px; width: 100%; margin-inline: auto;
+  min-height: 176px; padding: 16px 18px 14px; max-width: 440px; width: 100%; margin-inline: auto;
   display: flex; flex-direction: column; justify-content: space-between;
   border-radius: 22px; border: 1px solid rgba(255,255,255,.9);
   background:
-    radial-gradient(ellipse at 92% 10%, rgba(255,255,255,.95), transparent 44%),
-    linear-gradient(135deg, #FFFFFF 0%, #F1EAD8 62%, #FFFFFF 100%);
-  box-shadow: 0 12px 28px rgba(119,107,88,.13), inset 0 0 0 1px rgba(241,234,216,.8);
+    linear-gradient(145deg, rgba(255,255,255,.98), rgba(241,234,216,.94) 54%, rgba(255,255,255,.98)),
+    #FFFFFF;
+  box-shadow: 0 10px 22px rgba(119,107,88,.12), inset 0 0 0 1px rgba(255,255,255,.95), inset 0 -5px 14px rgba(213,199,173,.12);
 }
 .account-card::before, .account-card::after {
   content: ""; position: absolute; z-index: -1; pointer-events: none;
@@ -656,11 +656,12 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
 }
 .account-card::before { right: -70px; top: -64px; }
 .account-card::after { right: -105px; top: -30px; }
-.account-card-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.account-brand { color: #776B58; font-family: var(--font-display); font-weight: 700; font-size: 22px; letter-spacing: .5px; }
-.dana-brand { font-family: var(--font-caps); letter-spacing: 3px; }
+.account-card-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height:40px; }
+.account-logo { display:block; object-fit:contain; object-position:left center; max-width:190px; height:40px; }
+.bca-logo { width:154px; }
+.dana-logo { width:142px; }
 .account-chip {
-  width: 34px; height: 26px; border-radius: 7px; flex: none; position: relative;
+  width: 38px; height: 29px; border-radius: 6px; flex: none; position: relative;
   border: 1px solid rgba(119,107,88,.35);
   background: linear-gradient(135deg,#F8F1DE,#DCCDAE);
   box-shadow: inset 0 0 0 1px rgba(255,255,255,.65);
@@ -669,7 +670,7 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
 .account-chip::before { width:100%; height:1px; top:50%; left:0; }
 .account-chip::after { height:100%; width:1px; left:50%; top:0; }
 .account-chip i { position:absolute; inset:5px 9px; border:1px solid rgba(119,107,88,.25); border-radius:3px; }
-.account-number { margin-top: 15px; color: #776B58; font-family: var(--font-display); font-size: clamp(18px,4.5vw,23px); font-weight: 600; letter-spacing: clamp(1.5px, .5vw, 3px); overflow-wrap:anywhere; }
+.account-number { margin-top: 15px; color: #776B58; font-family: var(--font-display); font-size: clamp(18px,4.2vw,22px); font-weight: 600; letter-spacing: clamp(1.5px, .5vw, 3px); overflow-wrap:anywhere; }
 .account-card-bottom { display:flex; align-items:flex-end; justify-content:space-between; gap:10px; margin-top:12px; }
 .account-holder { color:#776B58; font-family:var(--font-display); font-size:13px; font-weight:600; line-height:1.4; overflow-wrap:anywhere; }
 .account-copy { flex:none; display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:8px 11px; border:1.5px solid #A99A7F; border-radius:999px; background:rgba(255,255,255,.88); color:#776B58; font-family:var(--font-caps); font-size:9px; letter-spacing:.3px; }
