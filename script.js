@@ -87,7 +87,7 @@ const CONFIG = {
   ],
 
   gallery: [
-    { src: "assets/images/gallery-1.svg", caption: "Pre-wedding" },
+    { src: "assets/images/gallery-1.jpg", caption: "Pre-wedding" },
     { src: "assets/images/gallery-2.svg", caption: "Momen Bahagia" },
     { src: "assets/images/gallery-3.svg", caption: "Kebersamaan" },
     { src: "assets/images/gallery-4.svg", caption: "Keluarga" },
