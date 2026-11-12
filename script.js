@@ -88,11 +88,11 @@ const CONFIG = {
 
   gallery: [
     { src: "assets/images/gallery-1.jpg", caption: "Pre-wedding" },
-    { src: "assets/images/gallery-2.svg", caption: "Momen Bahagia" },
-    { src: "assets/images/gallery-3.svg", caption: "Kebersamaan" },
-    { src: "assets/images/gallery-4.svg", caption: "Keluarga" },
-    { src: "assets/images/gallery-5.svg", caption: "Pelaminan" },
-    { src: "assets/images/gallery-6.svg", caption: "Detail Acara" }
+    { src: "assets/images/gallery-2.jpg", caption: "Momen Bahagia" },
+    { src: "assets/images/gallery-3.jpg", caption: "Kebersamaan" },
+    { src: "assets/images/gallery-4.jpg", caption: "Keluarga" },
+    { src: "assets/images/gallery-5.jpg", caption: "Pelaminan" },
+    { src: "assets/images/gallery-6.jpg", caption: "Detail Acara" }
   ],
 
   /* Kosongkan url untuk menampilkan placeholder elegan */
