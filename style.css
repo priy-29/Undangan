@@ -529,7 +529,20 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
    GALERI — MASONRY + LIGHTBOX
    ============================================================ */
 .gallery { background: var(--cream-2); }
-.masonry { columns: 2; column-gap: 14px; }
+.masonry {
+  columns: 2;
+  column-gap: 14px;
+  max-height: 620px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 4px 8px 8px 4px;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #c8bda9 transparent;
+  -webkit-overflow-scrolling: touch;
+}
+.masonry::-webkit-scrollbar { width: 5px; }
+.masonry::-webkit-scrollbar-thumb { background: #c8bda9; border-radius: 10px; }
 .g-item {
   break-inside: avoid;
   margin: 0 0 14px;
