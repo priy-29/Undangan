@@ -328,7 +328,7 @@ function renderGallery() {
   galleryItems = CONFIG.gallery;
   grid.innerHTML = galleryItems.map((g, i) =>
     '<figure class="g-item" data-index="' + i + '" role="button" tabindex="0" aria-label="Lihat: ' + g.caption + '">' +
-      '<img src="' + g.src + '" alt="' + g.caption + '" loading="lazy" decoding="async" />' +
+      '<img src="' + g.src + '" alt="' + g.caption + '" loading="eager" decoding="async" fetchpriority="low" />' +
       '<figcaption class="g-cap">' + g.caption + "</figcaption>" +
     "</figure>"
   ).join("");
