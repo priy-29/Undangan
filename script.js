@@ -92,7 +92,24 @@ const CONFIG = {
     { src: "assets/images/gallery-3.jpg", caption: "Kebersamaan" },
     { src: "assets/images/gallery-4.jpg", caption: "Keluarga" },
     { src: "assets/images/gallery-5.jpg", caption: "Pelaminan" },
-    { src: "assets/images/gallery-6.jpg", caption: "Detail Acara" }
+    { src: "assets/images/gallery-6.jpg", caption: "Detail Acara" },
+    { src: "assets/images/gallery-7.jpg", caption: "Momen 7" },
+    { src: "assets/images/gallery-8.jpg", caption: "Momen 8" },
+    { src: "assets/images/gallery-9.jpg", caption: "Momen 9" },
+    { src: "assets/images/gallery-10.jpg", caption: "Momen 10" },
+    { src: "assets/images/gallery-11.jpg", caption: "Momen 11" },
+    { src: "assets/images/gallery-12.jpg", caption: "Momen 12" },
+    { src: "assets/images/gallery-13.jpg", caption: "Momen 13" },
+    { src: "assets/images/gallery-14.jpg", caption: "Momen 14" },
+    { src: "assets/images/gallery-15.jpg", caption: "Momen 15" },
+    { src: "assets/images/gallery-16.jpg", caption: "Momen 16" },
+    { src: "assets/images/gallery-17.jpg", caption: "Momen 17" },
+    { src: "assets/images/gallery-18.jpg", caption: "Momen 18" },
+    { src: "assets/images/gallery-19.jpg", caption: "Momen 19" },
+    { src: "assets/images/gallery-20.jpg", caption: "Momen 20" },
+    { src: "assets/images/gallery-21.jpg", caption: "Momen 21" },
+    { src: "assets/images/gallery-22.jpg", caption: "Momen 22" },
+    { src: "assets/images/gallery-23.jpg", caption: "Momen 23" }
   ],
 
   /* Kosongkan url untuk menampilkan placeholder elegan */
