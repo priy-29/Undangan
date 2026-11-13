@@ -1160,3 +1160,16 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
   background: #D5C7AD;
   border-radius: 10px;
 }
+
+
+/* Petunjuk scroll galeri */
+.gallery-hint {
+  margin: 0 auto 14px;
+  text-align: center;
+  color: #776B58;
+  font-size: 12px;
+  letter-spacing: .5px;
+  opacity: .85;
+}
+.gallery-hint span { display: inline-block; margin-right: 5px; font-size: 16px; animation: galleryHintDown 1.3s ease-in-out infinite; }
+@keyframes galleryHintDown { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
