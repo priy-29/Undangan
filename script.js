@@ -351,6 +351,17 @@ function renderGallery() {
   ).join("");
 }
 
+function setupGalleryToggle() {
+  const grid = $("#galleryGrid");
+  const btn = $("#galleryMoreBtn");
+  if (!grid || !btn) return;
+  if (galleryItems.length <= 6) { btn.hidden = true; return; }
+  btn.addEventListener("click", () => {
+    const expanded = grid.classList.toggle("is-expanded");
+    btn.textContent = expanded ? "Tampilkan lebih sedikit ↑" : "Lihat foto lainnya ↓";
+  });
+}
+
 /* Video */
 function renderVideo() {
   const slot = $("#videoSlot");
@@ -918,6 +929,7 @@ function setupButterflies() {
   setGuestNames();
   renderStory();
   renderGallery();
+  setupGalleryToggle();
   renderGifts();
   renderVideo();
   setupCountdown();
