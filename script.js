@@ -353,13 +353,44 @@ function renderGallery() {
 
 function setupGalleryToggle() {
   const grid = $("#galleryGrid");
-  const btn = $("#galleryMoreBtn");
-  if (!grid || !btn) return;
-  if (galleryItems.length <= 6) { btn.hidden = true; return; }
-  btn.addEventListener("click", () => {
-    const expanded = grid.classList.toggle("is-expanded");
-    btn.textContent = expanded ? "Tampilkan lebih sedikit ↑" : "Lihat foto lainnya ↓";
+  const controls = $$(".gallery-page-btn");
+  if (!grid || !controls.length) return;
+
+  const pageSize = 6;
+  const totalPages = Math.ceil(galleryItems.length / pageSize);
+  let currentPage = 0;
+
+  function showPage(page) {
+    currentPage = Math.max(0, Math.min(page, totalPages - 1));
+    const startIndex = currentPage * pageSize;
+    const endIndex = Math.min(startIndex + pageSize, galleryItems.length);
+
+    $$("#galleryGrid .g-item").forEach((item, index) => {
+      item.hidden = index < startIndex || index >= endIndex;
+    });
+
+    controls.forEach((btn) => {
+      btn.disabled = btn.dataset.direction === "prev"
+        ? currentPage === 0
+        : currentPage >= totalPages - 1;
+      btn.textContent = btn.dataset.direction === "prev"
+        ? "↑ Foto sebelumnya"
+        : "Foto berikutnya ↓";
+    });
+
+    const label = $("#galleryPageLabel");
+    if (label) label.textContent = "Halaman " + (currentPage + 1) + " dari " + totalPages;
+
+    $("#galeri").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  controls.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      showPage(currentPage + (btn.dataset.direction === "next" ? 1 : -1));
+    });
   });
+
+  showPage(0);
 }
 
 /* Video */
