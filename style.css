@@ -530,7 +530,6 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
    ============================================================ */
 .gallery { background: var(--cream-2); }
 .masonry { columns: 2; column-gap: 14px; }
-.masonry:not(.is-expanded) .g-item:nth-child(n+7) { display: none; }
 .gallery-pagination {
   display: flex; align-items: center; justify-content: center;
   flex-wrap: wrap; gap: 10px; margin: 14px auto;
