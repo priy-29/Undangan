@@ -143,6 +143,15 @@ const $$ = (sel) => Array.from(document.querySelectorAll(sel));
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+// Setiap undangan dibuka, mulai dari bagian paling atas (Home).
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+if (window.location.hash) {
+  history.replaceState(null, "", window.location.pathname + window.location.search);
+}
+window.addEventListener("pageshow", () => {
+  window.scrollTo(0, 0);
+});
+
 function formatDateLong(dateStr) {
   const d = new Date(dateStr);
   if (isNaN(d)) return "";
@@ -455,6 +464,9 @@ const btnOpen = $("#btnOpen");
 
 function openInvitation() {
   if (!cover || cover.classList.contains("opening")) return;
+  // Pastikan setelah tombol Buka Undangan ditekan, halaman dimulai dari Home.
+  history.replaceState(null, "", window.location.pathname + window.location.search);
+  window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   cover.classList.add("opening"); /* flap terbuka, surat keluar */
 
   const t2 = reduceMotion ? 350 : 1350; /* cover mulai menghilang */
