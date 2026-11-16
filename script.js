@@ -23,7 +23,7 @@ const CONFIG = {
     bride: {
       firstName: "Lili",
       fullName: "Lili Nafisa Nestya",
-      role: "PUTRI KEDUA DARI",
+      role: "ANAK TUNGGAL DARI",
       parents: "Bapak Sukin & Ibu Sumarni",
       instagram: "lilinafisa",
       photo: "assets/images/bride.svg"
