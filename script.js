@@ -17,7 +17,7 @@ const CONFIG = {
       fullName: "Sevan Galang Prasetyo",
       role: "PUTRA PERTAMA DARI",
       parents: "Bapak Budi Ariyanto & Ibu Tri Wahyuni",
-      instagram: "sevangalang",
+      instagram: "glng_09",
       photo: "assets/images/galang.jpg"
     },
     bride: {
@@ -25,7 +25,7 @@ const CONFIG = {
       fullName: "Lili Nafisa Nestya",
       role: "ANAK TUNGGAL DARI",
       parents: "Bapak Sukin & Ibu Sumarni",
-      instagram: "lilinafisa",
+      instagram: "llinfsa.n",
       photo: "assets/images/lili.jpg"
     }
   },
@@ -46,7 +46,7 @@ const CONFIG = {
     },
     resepsi: {
       date: "Minggu, 29 November 2026",
-      time: "Pukul 11.00 – 12.00 WIB",
+      time: "Pukul 11.00 – selesai",
       venue: "Rumah Galang",
       address: "Rancamaya, RT 06 RW 01",
       maps: "https://maps.app.goo.gl/9Ly4uFxbrhpC8SNRA?g_st=ac"
@@ -291,6 +291,8 @@ function applyStatic() {
   const e = CONFIG.events;
   $("#akadDate").textContent = e.akad.date;
   $("#akadTime").textContent = e.akad.time;
+  const akadVenue = $("#akadVenue");
+  if (akadVenue) akadVenue.textContent = "Di kediaman mempelai wanita";
   $("#resepsiDate").textContent = e.resepsi.date;
   $("#resepsiTime").textContent = e.resepsi.time;
 
