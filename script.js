@@ -480,6 +480,20 @@ function openInvitation() {
     $("#content").setAttribute("aria-hidden", "false");
     $("#musicBtn").hidden = false;
     $("#floatNav").hidden = false;
+
+    // Paksa posisi awal ke Home setelah scroll dikunci dilepas.
+    const resetToHome = () => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    };
+    resetToHome();
+    requestAnimationFrame(() => {
+      resetToHome();
+      setTimeout(resetToHome, 120);
+      setTimeout(resetToHome, 450);
+    });
+
     playMusic();
     startPetals();
   }, t2);
