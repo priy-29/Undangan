@@ -18,7 +18,7 @@ const CONFIG = {
       role: "PUTRA PERTAMA DARI",
       parents: "Bapak Budi Ariyanto & Ibu Tri Wahyuni",
       instagram: "sevangalang",
-      photo: "assets/images/groom.svg"
+      photo: "assets/images/galang.jpg"
     },
     bride: {
       firstName: "Lili",
@@ -26,7 +26,7 @@ const CONFIG = {
       role: "ANAK TUNGGAL DARI",
       parents: "Bapak Sukin & Ibu Sumarni",
       instagram: "lilinafisa",
-      photo: "assets/images/bride.svg"
+      photo: "assets/images/lili.jpg"
     }
   },
 
