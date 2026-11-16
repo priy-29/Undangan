@@ -109,7 +109,6 @@ const CONFIG = {
     { src: "assets/images/gallery-20.jpg", caption: "Momen 20" },
     { src: "assets/images/gallery-21.jpg", caption: "Momen 21" },
     { src: "assets/images/gallery-22.jpg", caption: "Momen 22" },
-    { src: "assets/images/gallery-23.jpg", caption: "Momen 23" }
   ],
 
   /* Kosongkan url untuk menampilkan placeholder elegan */
