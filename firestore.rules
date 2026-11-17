@@ -2,9 +2,10 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
     match /guests/{guestId} {
-      // Website undangan perlu membaca data tamu untuk mencocokkan /@username.
-      allow read: if true;
-      // Hanya pengguna yang sudah login Firebase yang boleh menambah/mengubah/menghapus.
+      // Pengunjung hanya boleh menjalankan pencarian username dengan limit 1.
+      allow get: if true;
+      allow list: if request.auth != null || request.query.limit <= 1;
+      // Hanya akun Firebase yang login yang boleh mengelola daftar tamu.
       allow create, update, delete: if request.auth != null;
     }
   }
