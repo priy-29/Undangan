@@ -1,13 +1,5 @@
 "use strict";
 
-/* ============================================================
-   UNDANGAN PERNIKAHAN DIGITAL — script.js
-   ------------------------------------------------------------
-   KONFIGURASI UNDANGAN ADA DI PALING ATAS FILE INI.
-   Ubah data di bawah ini (nama, tanggal, alamat, dll) tanpa
-   perlu menyentuh kode di bawahnya.
-   ============================================================ */
-
 const CONFIG = {
   title: "The Wedding of Galang & Lili",
 
@@ -67,7 +59,7 @@ const CONFIG = {
       desc: "Waktu mempertemukan kami kembali. Pada bulan Juni, saat masa SMK, kami mulai saling mendekat dan mengenal lebih dalam. Obrolan melalui WhatsApp pun semakin sering, hingga perlahan jarak di antara kami terasa semakin dekat."
     },
     {
-      year: "18 Juli",
+      year: "18 Juli 2022",
       title: "Memulai Kisah Bersama",
       photo: "assets/images/story-3.jpg",
       desc: "Dari obrolan sederhana yang semakin berarti, tumbuh keyakinan untuk melangkah bersama. Pada tanggal 18 Juli, kami resmi menjalin hubungan dan memulai perjalanan sebagai sepasang kekasih."
