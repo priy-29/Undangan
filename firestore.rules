@@ -1,12 +1,12 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
+
+    // DATA TAMU DARI LINK /@username
     match /guests/{guestId} {
-      // Undangan dapat membaca satu dokumen tamu berdasarkan username.
       allow get: if true;
       allow list: if request.auth != null;
 
-      // Link /@username boleh membuat profil tamu otomatis.
       allow create: if guestId == request.resource.data.username
         && request.resource.data.keys().hasOnly([
           'username', 'name', 'visitCount', 'createdAt', 'lastVisited'
@@ -15,14 +15,35 @@ service cloud.firestore {
         && request.resource.data.name is string
         && request.resource.data.visitCount == 1;
 
-      // Pengunjung hanya boleh menambah hitungan kunjungan dan memperbarui waktu terakhir.
       allow update: if guestId == resource.data.username
         && request.resource.data.diff(resource.data).affectedKeys()
           .hasOnly(['visitCount', 'lastVisited'])
         && request.resource.data.visitCount == resource.data.visitCount + 1;
 
-      // Penghapusan hanya oleh admin yang login.
       allow delete: if request.auth != null;
+    }
+
+    // RSVP / UCAPAN DAN DOA
+    match /rsvps/{rsvpId} {
+      // Pengunjung dapat mengirim ucapan dan melihat buku tamu.
+      allow create: if request.resource.data.keys().hasOnly([
+          'name', 'attendance', 'guests', 'message', 'createdAt'
+        ])
+        && request.resource.data.name is string
+        && request.resource.data.name.size() > 0
+        && request.resource.data.name.size() <= 120
+        && request.resource.data.attendance in [
+          'Hadir', 'Tidak Hadir', 'Masih Ragu'
+        ]
+        && request.resource.data.guests == 1
+        && request.resource.data.message is string
+        && request.resource.data.message.size() <= 600
+        && request.resource.data.createdAt == request.time;
+
+      allow get, list: if true;
+
+      // Data ucapan tidak boleh diubah atau dihapus oleh pengunjung.
+      allow update, delete: if request.auth != null;
     }
   }
 }
