@@ -201,13 +201,31 @@ async function loadGuest() {
   const username = getGuestUsername();
   if (!username || !db) return;
   try {
-    const snap = await db.collection("guests").where("username", "==", username).limit(1).get();
-    if (!snap.empty) {
-      const data = snap.docs[0].data();
-      if (data && data.name) guestName = data.name;
+    const guestRef = db.collection("guests").doc(username);
+    const snap = await guestRef.get();
+
+    if (snap.exists) {
+      const data = snap.data() || {};
+      if (data.name) guestName = data.name;
+      await guestRef.update({
+        visitCount: firebase.firestore.FieldValue.increment(1),
+        lastVisited: firebase.firestore.FieldValue.serverTimestamp()
+      });
+    } else {
+      const name = username
+        .replace(/[._-]+/g, " ")
+        .replace(/\b\w/g, (letter) => letter.toUpperCase());
+      await guestRef.set({
+        username,
+        name,
+        visitCount: 1,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+        lastVisited: firebase.firestore.FieldValue.serverTimestamp()
+      });
+      guestName = name;
     }
   } catch (err) {
-    console.warn("Gagal memuat nama tamu:", err);
+    console.warn("Gagal memuat/mencatat tamu:", err);
   }
 }
 
