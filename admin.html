@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Admin Tamu · Galang & Lili</title>
+<style>
+:root{--ink:#514838;--muted:#887e6b;--paper:#f6f1e6;--line:#e4dac5;--gold:#a58a5c;--white:#fffdf8}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(145deg,#f7f2e8,#eee5d3);color:var(--ink);font:15px/1.5 system-ui,-apple-system,sans-serif;min-height:100vh;padding:28px 16px}
+.wrap{max-width:760px;margin:auto}.top{text-align:center;margin:12px 0 24px}.eyebrow{letter-spacing:4px;font-size:11px;color:var(--muted)}h1{font:normal 38px Georgia,serif;margin:6px 0}.sub{color:var(--muted);margin:0}
+.panel{background:rgba(255,253,248,.94);border:1px solid var(--line);border-radius:22px;padding:22px;margin:16px 0;box-shadow:0 12px 35px #65583a12}
+h2{font:normal 23px Georgia,serif;margin:0 0 14px}label{display:block;font-weight:600;font-size:13px;margin:12px 0 6px}
+input,textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:13px;background:#fffefa;color:var(--ink);font:inherit;outline:none}input:focus,textarea:focus{border-color:var(--gold)}textarea{min-height:130px;resize:vertical}
+button,.btn{border:0;border-radius:999px;padding:12px 18px;background:var(--ink);color:white;font:600 14px system-ui;cursor:pointer}button:disabled{opacity:.5;cursor:wait}.soft{background:#eee6d6;color:var(--ink)}.danger{background:#f7e7e2;color:#873d31;padding:8px 12px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.row>*{flex:1}.hint,.status{font-size:13px;color:var(--muted)}.status{margin-top:10px;min-height:20px}.hidden{display:none!important}
+.header-row{display:flex;justify-content:space-between;align-items:center;gap:10px}.guest{border-top:1px solid var(--line);padding:13px 0;display:flex;justify-content:space-between;gap:12px;align-items:center}.guest:first-child{border-top:0}.guest-name{font-weight:650}.guest-link{font-size:12px;color:var(--muted);word-break:break-all}.guest-actions{display:flex;gap:6px;flex-shrink:0}.guest-actions button{padding:8px 10px;font-size:12px}
+@media(max-width:520px){body{padding:18px 12px}.panel{padding:17px}h1{font-size:32px}.guest{align-items:flex-start}.guest-actions{flex-direction:column}.guest-actions button{width:100%}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="top"><div class="eyebrow">THE WEDDING OF</div><h1>Galang &amp; Lili</h1><p class="sub">Panel pengelolaan tamu undangan</p></header>
+<section id="loginPanel" class="panel">
+<h2>Masuk Admin</h2>
+<form id="loginForm">
+<label for="email">Email admin Firebase</label><input id="email" type="email" autocomplete="username" required>
+<label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required>
+<button type="submit" style="width:100%;margin-top:16px">Masuk</button>
+<p id="loginStatus" class="status" role="status"></p>
+</form>
+<p class="hint">Akun admin dibuat terlebih dahulu melalui Firebase Authentication. Halaman ini tidak menyediakan pendaftaran akun.</p>
+</section>
+<section id="appPanel" class="hidden">
+<div class="panel">
+<div class="header-row"><h2>Tambah Tamu</h2><button id="logoutBtn" class="soft" type="button">Keluar</button></div>
+<label for="names">Nama tamu (satu nama per baris)</label>
+<textarea id="names" placeholder="Farda&#10;Panda&#10;Bapak Ahmad"></textarea>
+<p class="hint">Username dibuat otomatis dari nama. Jika ada nama sama, sistem menambahkan angka agar link tidak bentrok.</p>
+<button id="addBtn" type="button" style="width:100%;margin-top:10px">Simpan Tamu &amp; Buat Link</button>
+<p id="addStatus" class="status" role="status"></p>
+</div>
+<div class="panel">
+<div class="header-row"><h2>Daftar Tamu</h2><button id="refreshBtn" class="soft" type="button">Muat ulang</button></div>
+<p id="count" class="hint">Memuat data...</p>
+<div id="guestList"></div>
+</div>
+</section>
+</main>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="admin.js"></script>
+</body></html>
