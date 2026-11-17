@@ -199,7 +199,15 @@ function getGuestUsername() {
 
 async function loadGuest() {
   const username = getGuestUsername();
-  if (!username || !db) return;
+  if (!username) return;
+
+  // Nama dari URL tetap dipakai meskipun Firebase sedang tidak tersambung.
+  guestName = username
+    .replace(/[._-]+/g, " ")
+    .replace(/\b\w/g, (letter) => letter.toUpperCase());
+
+  if (!db) return;
+
   try {
     const guestRef = db.collection("guests").doc(username);
     const snap = await guestRef.get();
@@ -335,6 +343,12 @@ function setGuestNames() {
   set("#heroGuest");
   set("#greetingGuest");
   set("#footerGuest");
+
+  // Isi otomatis kolom nama RSVP dari nama pada URL undangan.
+  const rsvpName = $("#rsvpName");
+  if (rsvpName && getGuestUsername()) {
+    rsvpName.value = guestName;
+  }
 }
 
 /* Love Story */
