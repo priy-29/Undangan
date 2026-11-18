@@ -2,30 +2,32 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // DATA TAMU DARI LINK /@username
     match /guests/{guestId} {
+      // Tamu hanya boleh membaca dokumen sendiri melalui link /@username.
       allow get: if true;
       allow list: if request.auth != null;
 
-      allow create: if guestId == request.resource.data.username
-        && request.resource.data.keys().hasOnly([
-          'username', 'name', 'visitCount', 'createdAt', 'lastVisited'
-        ])
-        && request.resource.data.username is string
-        && request.resource.data.name is string
-        && request.resource.data.visitCount == 1;
+      // Admin login dapat membuat data tamu; publik hanya boleh membuat profil otomatis.
+      allow create: if request.auth != null ||
+        (guestId == request.resource.data.username
+          && request.resource.data.keys().hasOnly([
+            'username', 'name', 'visitCount', 'createdAt', 'lastVisited'
+          ])
+          && request.resource.data.username is string
+          && request.resource.data.name is string
+          && request.resource.data.visitCount == 1);
 
-      allow update: if guestId == resource.data.username
-        && request.resource.data.diff(resource.data).affectedKeys()
-          .hasOnly(['visitCount', 'lastVisited'])
-        && request.resource.data.visitCount == resource.data.visitCount + 1;
+      // Admin login dapat mengedit; publik hanya boleh menambah satu kunjungan.
+      allow update: if request.auth != null ||
+        (guestId == resource.data.username
+          && request.resource.data.diff(resource.data).affectedKeys()
+            .hasOnly(['visitCount', 'lastVisited'])
+          && request.resource.data.visitCount == resource.data.visitCount + 1);
 
       allow delete: if request.auth != null;
     }
 
-    // RSVP / UCAPAN DAN DOA
     match /rsvps/{rsvpId} {
-      // Pengunjung dapat mengirim ucapan dan melihat buku tamu.
       allow create: if request.resource.data.keys().hasOnly([
           'name', 'attendance', 'guests', 'message', 'createdAt'
         ])
@@ -41,8 +43,6 @@ service cloud.firestore {
         && request.resource.data.createdAt == request.time;
 
       allow get, list: if true;
-
-      // Data ucapan tidak boleh diubah atau dihapus oleh pengunjung.
       allow update, delete: if request.auth != null;
     }
   }
