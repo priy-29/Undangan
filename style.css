@@ -1175,3 +1175,44 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
 }
 .gallery-hint span { display: inline-block; margin-right: 5px; font-size: 16px; animation: galleryHintDown 1.3s ease-in-out infinite; }
 @keyframes galleryHintDown { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
+
+/* ============================================================
+   HIGH CONTRAST TEXT — cover & hero
+   ============================================================ */
+.cover-eyebrow,
+.to-label,
+.cover-hint {
+  color: #302417 !important;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(255,255,255,.9), 0 2px 7px rgba(255,255,255,.85);
+}
+.cover-eyebrow-sub,
+.to-name {
+  color: #302417 !important;
+  -webkit-text-fill-color: #302417 !important;
+  font-weight: 700;
+  -webkit-text-stroke: .45px #302417;
+  text-shadow: 0 2px 3px rgba(255,255,255,.95), 0 3px 10px rgba(255,255,255,.85);
+}
+.hero-eyebrow,
+.hero-to,
+.hero-to-name,
+.hero-date,
+.hero-place,
+.cd-num,
+.cd-label {
+  color: #302417 !important;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(255,255,255,.95), 0 2px 8px rgba(255,255,255,.9), 0 2px 5px rgba(255,255,255,.55);
+}
+.hn-line,
+.hn-amp {
+  color: #302417 !important;
+  -webkit-text-fill-color: #302417 !important;
+  font-weight: 700;
+  -webkit-text-stroke: .65px #302417;
+  filter: drop-shadow(0 2px 1px rgba(255,255,255,.95)) drop-shadow(0 4px 9px rgba(255,255,255,.85));
+}
+.cd-num {
+  -webkit-text-stroke: .35px #302417;
+}
