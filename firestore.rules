@@ -29,7 +29,7 @@ service cloud.firestore {
 
     match /rsvps/{rsvpId} {
       allow create: if request.resource.data.keys().hasOnly([
-          'name', 'attendance', 'guests', 'message', 'createdAt'
+          'name', 'attendance', 'guests', 'message', 'invitationUsername', 'invitationName', 'invitationPath', 'createdAt'
         ])
         && request.resource.data.name is string
         && request.resource.data.name.size() > 0
@@ -40,7 +40,10 @@ service cloud.firestore {
         && request.resource.data.guests == 1
         && request.resource.data.message is string
         && request.resource.data.message.size() <= 600
-        && request.resource.data.createdAt == request.time;
+        && request.resource.data.createdAt == request.time
+        && (!('invitationUsername' in request.resource.data) || request.resource.data.invitationUsername is string)
+        && (!('invitationName' in request.resource.data) || request.resource.data.invitationName is string)
+        && (!('invitationPath' in request.resource.data) || request.resource.data.invitationPath is string);
 
       allow get, list: if true;
       allow update, delete: if request.auth != null;
