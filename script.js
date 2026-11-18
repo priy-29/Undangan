@@ -331,7 +331,8 @@ function applyStatic() {
   /* Hadiah */
   $("#giftAddress").textContent = CONFIG.gifts.address;
   $("#copyAddressBtn").dataset.copy = CONFIG.gifts.address;
-  $("#qrisImg").src = CONFIG.gifts.qris;
+  const qrisImg = $("#qrisImg");
+  if (qrisImg) qrisImg.src = CONFIG.gifts.qris;
 }
 
 function setGuestNames() {
