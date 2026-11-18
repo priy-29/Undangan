@@ -1222,3 +1222,39 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
 .cd-num {
   -webkit-text-stroke: .35px #302417;
 }
+
+/* COVER & HERO TYPOGRAPHY — larger and visibly heavier on phones */
+.cover-eyebrow {
+  font-size: clamp(15px, 4vw, 21px) !important;
+  letter-spacing: 5px !important;
+  font-weight: 800 !important;
+  -webkit-text-stroke: .65px #302417;
+}
+.to-label {
+  font-size: clamp(14px, 3.8vw, 17px) !important;
+  letter-spacing: 3px !important;
+  font-weight: 800 !important;
+  -webkit-text-stroke: .5px #302417;
+}
+.to-name {
+  font-size: clamp(38px, 10vw, 54px) !important;
+  font-weight: 800 !important;
+  -webkit-text-stroke: 1px #302417 !important;
+  text-shadow: 0 2px 2px rgba(255,255,255,.95), 0 4px 12px rgba(255,255,255,.75) !important;
+}
+.hero-eyebrow {
+  font-size: clamp(14px, 3.5vw, 19px) !important;
+  letter-spacing: 5px !important;
+  font-weight: 800 !important;
+  -webkit-text-stroke: .65px #302417;
+}
+.hero-to {
+  font-size: clamp(17px, 4.5vw, 22px) !important;
+  font-weight: 800 !important;
+  -webkit-text-stroke: .35px #302417;
+}
+.hero-to-name {
+  font-size: 1.18em;
+  font-weight: 800 !important;
+  -webkit-text-stroke: .7px #302417;
+}
