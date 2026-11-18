@@ -124,7 +124,7 @@ section[id] { scroll-margin-top: 10px; }
   position: absolute; inset: 0;
   /* Tepi foto lebih gelap, lalu memudar ke bagian tengah */
   background:
-    radial-gradient(ellipse at center, rgba(0,0,0,0) 24%, rgba(0,0,0,.12) 62%, rgba(0,0,0,.48) 100%),
+    radial-gradient(ellipse at center, rgba(0,0,0,0) 24%, rgba(0,0,0,.28) 48%, rgba(0,0,0,.68) 100%),
     linear-gradient(180deg, rgba(241, 234, 216, 0.08), rgba(241, 234, 216, 0.04) 55%, rgba(241, 234, 216, 0.12));
 }
 .cover-particles { position: absolute; inset: 0; pointer-events: none; }
@@ -299,7 +299,7 @@ body.entered .content { opacity: 1; visibility: visible; }
   position: absolute; inset: 0; z-index: 1;
   /* Bayangan hitam dari pinggir foto yang semakin pudar ke tengah */
   background:
-    radial-gradient(ellipse at center, rgba(0,0,0,0) 24%, rgba(0,0,0,.12) 62%, rgba(0,0,0,.48) 100%),
+    radial-gradient(ellipse at center, rgba(0,0,0,0) 24%, rgba(0,0,0,.28) 48%, rgba(0,0,0,.68) 100%),
     linear-gradient(180deg, rgba(241, 234, 216, 0.08), rgba(255, 255, 255, 0.06) 48%, rgba(241, 234, 216, 0.14));
 }
 .hero-gunungan { position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: min(360px, 72vw); opacity: 0.22; z-index: 2; pointer-events: none; }
