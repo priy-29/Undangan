@@ -1258,3 +1258,43 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
   font-weight: 800 !important;
   -webkit-text-stroke: .7px #302417;
 }
+
+/* Cream typography for clear contrast on darkened photo backgrounds */
+.cover-eyebrow,
+.to-label,
+.cover-hint,
+.hero-eyebrow,
+.hero-to,
+.hero-to-name,
+.hero-date,
+.hero-place,
+.cd-num,
+.cd-label {
+  color: #F7EEDB !important;
+  -webkit-text-fill-color: #F7EEDB !important;
+  font-weight: 800 !important;
+  -webkit-text-stroke: .45px rgba(75, 58, 35, .75);
+  text-shadow:
+    0 1px 2px rgba(35, 25, 12, .9),
+    0 3px 9px rgba(35, 25, 12, .72),
+    0 0 16px rgba(35, 25, 12, .45) !important;
+}
+
+.cover-eyebrow-sub,
+.to-name,
+.hn-line,
+.hn-amp {
+  color: #F7EEDB !important;
+  -webkit-text-fill-color: #F7EEDB !important;
+  font-weight: 800 !important;
+  -webkit-text-stroke: .65px rgba(75, 58, 35, .85);
+  text-shadow:
+    0 2px 2px rgba(35, 25, 12, .9),
+    0 4px 12px rgba(35, 25, 12, .78),
+    0 0 20px rgba(35, 25, 12, .55) !important;
+  filter: none !important;
+}
+
+.to-name {
+  -webkit-text-stroke: 1px rgba(75, 58, 35, .9);
+}
