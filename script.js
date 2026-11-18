@@ -693,11 +693,23 @@ function setupRsvp() {
     btn.disabled = true;
 
     try {
+      const invitationUsername = getGuestUsername();
+      let invitationName = "";
+      if (invitationUsername) {
+        const invitedGuest = await db.collection("guests").doc(invitationUsername).get();
+        invitationName = invitedGuest.exists
+          ? (invitedGuest.data().name || invitationUsername)
+          : invitationUsername.replace(/[._-]+/g, " ").replace(/\b\w/g, letter => letter.toUpperCase());
+      }
+
       await db.collection("rsvps").add({
         name: name,
         attendance: attendance.value,
         guests: guests,
         message: message || "",
+        invitationUsername: invitationUsername || "",
+        invitationName: invitationName,
+        invitationPath: invitationUsername ? "/@" + invitationUsername : "",
         createdAt: firebase.firestore.FieldValue.serverTimestamp()
       });
       form.reset();
