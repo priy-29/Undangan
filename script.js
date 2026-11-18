@@ -119,7 +119,7 @@ const CONFIG = {
       { name: "DANA · Lili", number: "083185728027" }
     ],
     address: "Rumah Galang: Rancamaya, RT 06 RW 01. Rumah Lili: Jipang, RT 01 RW 04.",
-    qris: "assets/images/qris.svg"
+    qris: "assets/images/qris.jpg"
   },
 
   /* Letakkan file musik di assets/music/ lalu ubah path di bawah */
