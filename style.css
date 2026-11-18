@@ -1298,3 +1298,42 @@ body.entered .hero-scroll { animation-delay: 1.25s; }
 .to-name {
   -webkit-text-stroke: 1px rgba(75, 58, 35, .9);
 }
+
+/* PURE CREAM — remove all brown tint from invitation headings */
+.cover-eyebrow,
+.cover-eyebrow-sub,
+.to-label,
+.to-name,
+.hero-eyebrow,
+.hn-line,
+.hn-amp,
+.hero-to,
+.hero-to-name,
+.hero-date,
+.hero-place,
+.cd-num,
+.cd-label {
+  color: #FFF7E8 !important;
+  -webkit-text-fill-color: #FFF7E8 !important;
+  font-weight: 900 !important;
+  -webkit-text-stroke: 0 !important;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, .72),
+    0 3px 9px rgba(0, 0, 0, .62) !important;
+  filter: none !important;
+}
+
+.cover-eyebrow {
+  font-family: var(--font-caps);
+  font-size: clamp(16px, 4.2vw, 22px) !important;
+  letter-spacing: 5px !important;
+  font-weight: 900 !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,.78), 0 3px 10px rgba(0,0,0,.68) !important;
+}
+
+.cover-eyebrow-sub,
+.to-name,
+.hn-line {
+  font-weight: 900 !important;
+  text-shadow: 0 2px 3px rgba(0,0,0,.8), 0 4px 12px rgba(0,0,0,.7) !important;
+}
