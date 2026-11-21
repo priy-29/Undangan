@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/@:username",
-      "destination": "/index.html"
+      "destination": "/api/guest?username=:username"
     }
   ]
 }
