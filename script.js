@@ -193,14 +193,13 @@ if (firebaseOk) {
 let guestName = "Bapak/Ibu/Saudara/i";
 
 function getGuestUsername() {
-  const pathMatch = window.location.pathname.match(/^\\/@([\\w.\\-]+)/);
+  const pathMatch = window.location.pathname.match(/^\/@([\w.\-]+)/);
   if (pathMatch) return pathMatch[1];
 
   const params = new URLSearchParams(window.location.search);
   const queryName = params.get("to");
-  return queryName && /^[\\w.\\-]{1,60}$/.test(queryName) ? queryName : null;
-}
-async function loadGuest() {
+  return queryName && /^[\w.\-]{1,60}$/.test(queryName) ? queryName : null;
+}async function loadGuest() {
   const username = getGuestUsername();
   if (!username) return;
 
